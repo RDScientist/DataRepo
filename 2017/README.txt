@@ -1,1 +1,1 @@
-This directory contains code and data files from 2017 
+This directory contains data files from 2017 
