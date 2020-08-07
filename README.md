@@ -6,3 +6,4 @@ Please come visit us on the web for all of your data science needs!
 
 http://www.reflectionsofadatascientist.com/
 
+ 
