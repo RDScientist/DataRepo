@@ -1,0 +1,16 @@
+data newset;
+	set oldset;
+	FixedVar1 = put(OldVar1, 16.);
+	FixedVar2 = put(OldVar2, 16.);
+	drop OldVar1 OldVar2;
+	rename FixedVar1 = OldVar1;
+	rename FixedVar2 = OldVar2;
+run;
+
+/****************************************************************************************/
+
+data oldset;
+	set oldset;
+	FixedVar1 = put(OldVar1, 16.);
+	FixedVar2 = put(OldVar2, 16.);
+run;
