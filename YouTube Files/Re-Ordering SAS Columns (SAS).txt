@@ -1,0 +1,4 @@
+data SetB;
+	Retain X Y Z W;
+set SetA;
+run;
