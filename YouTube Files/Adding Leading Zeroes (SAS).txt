@@ -1,0 +1,14 @@
+data newset (drop = VarA); 
+	set oldset;
+	VarB = put(input(VarA,best32.),z9.); 
+run;
+
+/* Use Z(# total length of number). to specify how long you would like the number to be. So, for example, */
+/* if the total maximum length of a number within the VARA variable column needed to be 7 characters long, */
+/* you would change Z9 to Z7. */
+
+/* For 334 to become 0000334 use z7. For 334 to become 00000000334 use z11. */
+
+/* Finally, the PUT statement tells SAS to change the entire variable format to */
+/* characters, thus, holding the leading zeroes */
+
