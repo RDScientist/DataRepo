@@ -11,4 +11,3 @@ run;
 
 /* Finally, the PUT statement tells SAS to change the entire variable format to */
 /* characters, thus, holding the leading zeroes */
-
