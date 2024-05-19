@@ -1,0 +1,23 @@
+data DataSetB; 
+	set DataSetA;
+	Street = scan(Address, 1, ','); 
+	City = scan(Address, -3); 
+	State = scan(Address, -2); 
+	Zip = scan(Address, -1, ' '); 
+run;
+
+/****************************************************************************************/
+
+/* So you’re working with a data set, and one of the variable columns contains an address value structured such as: */
+
+/* 303 SAS LANE, Cleveland, OH 1111 */
+
+/* How would you format such data so that each part of the address has its own variable column? The following code will take care of it for you. */
+
+data DataSetB; /* New data set name */
+	set DataSetA; /* Old data set name */
+	Street = scan(Address, 1, ','); /* Creates a variable column for the street value */
+	City = scan(Address, -3); /* Creates a variable column for the city variable */
+	State = scan(Address, -2); /* Creates a variable column for the state variable */
+	Zip = scan(Address, -1, ' '); /* Creates a variable column for the zip variable */
+run;
