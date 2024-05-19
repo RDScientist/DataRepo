@@ -1,0 +1,16 @@
+proc freq data = MinorLeague;
+	tables player_position;
+run;
+
+proc format;
+	value $ Position_Format
+		'C' = ' Center '
+		'G' = ' Goalie '
+		'LW' = ' Left Wing '
+		'RW' = ' Right Wing ';
+run;
+
+data MinorLeague;
+	set MinorLeague;
+	format player_position Position_Format.;
+run;
