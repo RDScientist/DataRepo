@@ -1,0 +1,35 @@
+libname Test 'C:\Users\';
+
+/**************************************/
+
+libname 12345678 'C:\Users\';
+
+/* 12345678 */ /* NO! */
+
+libname A1234567 'C:\Users\';
+
+/* A1234567 */ /* YES! */
+
+libname a1234567 'C:\Users\';
+
+/* a1234567 */ /* YES! */
+
+libname _1234567 'C:\Users\';
+
+/* _1234567 */ /* YES */
+
+libname _123456_ 'C:\Users\';
+
+/* _123456_ */ /* YES! */
+
+/* Library Name Length Limitations -> 8 Characters */
+/* First character must be a letter, or an underscore (_) */ 
+/* The remaining characters can be any length of characters or numerals (0 through 9). */
+
+data newset;
+	set oldset;
+run;
+
+data newset;
+	set oldset;
+run;
