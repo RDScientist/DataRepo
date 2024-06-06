@@ -1,0 +1,7 @@
+proc sql;
+	drop table tablea;
+quit;
+
+proc sql; /* Tells SAS that we will be utilizing SQL functionality */
+	drop tableb, tablec; /* Drop table(s) TableB, TableC. */
+quit; /* End processing */
