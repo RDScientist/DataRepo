@@ -1,0 +1,27 @@
+/*** Keep ***/
+
+data SetB (Keep = VARA VARB VARC); /* No commas, but parentheses and "=" are utilized */
+	set SetA;
+run;
+
+/* (OR) */
+
+data SetC;
+	set SetA;
+	keep VARA VARB VARC; /* No commas, parentheses or "=" */
+run;
+
+/*** Drop ***/
+
+data SetE (Drop = VARA VARB VARC); /* No commas, but parentheses and "=" are utilized */
+	set SetD;
+	VARD = VARA + VARB;
+run;
+
+/* (OR) */
+
+data SetF;
+	data SetD;
+	VARD = VARA + VARB;
+	drop VARA VARB VARC; /* No commas, parentheses or "=" */
+run;
